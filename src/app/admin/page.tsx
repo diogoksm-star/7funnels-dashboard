@@ -1,5 +1,5 @@
-import { AdminShell } from "@/components/admin-shell";
+import { redirect } from "next/navigation";
 
 export default function AdminPage() {
-  return <AdminShell />;
+  redirect("/dash/admin");
 }

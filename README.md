@@ -4,7 +4,7 @@ Dashboard visual para relatórios de Meta/Facebook Ads por cliente.
 
 ## O que já existe
 
-- Admin em `/admin`
+- Admin em `/dash/admin`
 - Dashboard público por slug, exemplo `/dash/clube-carvao`
 - Senha simples por dashboard
 - Upload de CSV/XLSX
@@ -23,7 +23,7 @@ npm run dev
 
 Depois acesse:
 
-- `http://localhost:3000/admin`
+- `http://localhost:3000/dash/admin`
 - `http://localhost:3000/dash/clube-carvao`
 
 Demo:

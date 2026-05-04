@@ -14,7 +14,7 @@ export default function Home() {
             Importe os CSVs do Meta Ads, defina metas manuais e entregue um dashboard com senha exclusiva para cada cliente.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/admin" className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200">
+            <Link href="/dash/admin" className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200">
               Abrir admin
               <ArrowRight size={18} />
             </Link>
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="grid gap-3">
           {[
             ["Upload inteligente", "CSV/XLSX de campanha, conjunto e anúncio.", Upload],
-            ["Login por dashboard", "Rota /cliente + senha simples para cada cliente.", LockKeyhole],
+            ["Login por dashboard", "Rota /dash/cliente + senha simples para cada cliente.", LockKeyhole],
             ["Supabase preparado", "Schema Postgres e storage para evolução do produto.", Database],
             ["Análise visual", "Geral, objetivos, campanhas, públicos, criativos e alertas.", BarChart3],
           ].map(([title, body, Icon]) => (
