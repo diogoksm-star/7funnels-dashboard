@@ -38,8 +38,7 @@ create table if not exists public.entities (
   manual_category text,
   tags text[] not null default '{}',
   metadata jsonb not null default '{}'::jsonb,
-  created_at timestamptz not null default now(),
-  unique (client_id, level, normalized_name, coalesce(parent_name, ''))
+  created_at timestamptz not null default now()
 );
 
 create table if not exists public.metric_rows (
@@ -113,14 +112,17 @@ create table if not exists public.entity_mappings (
   audience_gender text,
   audience_temperature text,
   audience_type text,
-  updated_at timestamptz not null default now(),
-  unique (client_id, level, original_name, coalesce(parent_name, ''))
+  updated_at timestamptz not null default now()
 );
 
 create index if not exists metric_rows_client_level_idx on public.metric_rows(client_id, level);
 create index if not exists metric_rows_import_idx on public.metric_rows(import_id);
 create index if not exists entities_client_level_idx on public.entities(client_id, level);
 create index if not exists entity_mappings_client_level_idx on public.entity_mappings(client_id, level);
+create unique index if not exists entities_unique_name_idx
+  on public.entities(client_id, level, normalized_name, coalesce(parent_name, ''));
+create unique index if not exists entity_mappings_unique_name_idx
+  on public.entity_mappings(client_id, level, original_name, coalesce(parent_name, ''));
 
 alter table public.clients enable row level security;
 alter table public.imports enable row level security;
