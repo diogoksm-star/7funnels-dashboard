@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { ClientDashboardShell } from "@/components/client-dashboard-shell";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -6,5 +6,5 @@ type PageProps = {
 
 export default async function ClientDashboardPage({ params }: PageProps) {
   const { slug } = await params;
-  redirect(`/dash/${slug}`);
+  return <ClientDashboardShell slug={slug} />;
 }

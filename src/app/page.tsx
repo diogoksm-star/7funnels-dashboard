@@ -18,7 +18,7 @@ export default function Home() {
               Abrir admin
               <ArrowRight size={18} />
             </Link>
-            <Link href="/clube-carvao" className="inline-flex items-center gap-2 rounded-md border border-white/10 px-4 py-3 font-semibold text-zinc-100 hover:bg-white/[0.04]">
+            <Link href="/dash/clube-carvao" className="inline-flex items-center gap-2 rounded-md border border-white/10 px-4 py-3 font-semibold text-zinc-100 hover:bg-white/[0.04]">
               Ver demo cliente
             </Link>
           </div>

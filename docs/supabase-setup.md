@@ -16,7 +16,7 @@ Crie `.env.local` na raiz:
 NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=SUA_ANON_KEY
 SUPABASE_SERVICE_ROLE_KEY=SUA_SERVICE_ROLE_KEY
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_URL=https://7funnels.info
 ```
 
 Nunca commitar `.env.local`.

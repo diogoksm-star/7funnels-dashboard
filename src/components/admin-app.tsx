@@ -439,7 +439,7 @@ function ClientSelector({
       {selectedClient ? (
         <div className="mt-4 space-y-2 rounded-md border border-white/10 bg-black/20 p-3 text-sm text-zinc-400">
           <p className="flex items-center gap-2">
-            <Link2 size={14} /> /{selectedClient.slug}
+            <Link2 size={14} /> /dash/{selectedClient.slug}
           </p>
           <p className="flex items-center gap-2">
             <KeyRound size={14} /> {selectedClient.password}
